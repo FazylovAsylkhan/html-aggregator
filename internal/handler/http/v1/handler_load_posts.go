@@ -5,7 +5,7 @@ import (
 )
 
 func (h HttpRouterV1) handlerLoadPosts(w http.ResponseWriter, r *http.Request) {
-	posts, err := h.baspana.LoadPosts()
+	posts, err := h.baspana.LoadPosts(r)
 	if err != nil {
 		RespondWithError(w, 500, err.Error())
 	}

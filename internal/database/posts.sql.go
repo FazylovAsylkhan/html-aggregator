@@ -7,7 +7,6 @@ package database
 
 import (
 	"context"
-	"database/sql"
 	"time"
 
 	"github.com/google/uuid"
@@ -18,29 +17,33 @@ INSERT INTO postsBaspana (
     id, 
     created_at, 
     updated_at, 
+    date_publication,
     title, 
     image, 
     cost_for_metr,
     address, 
     link_detail_post, 
     number_object, 
-    count_access
+    count_access,
+    region
 )
-VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
-RETURNING id, created_at, updated_at, title, image, cost_for_metr, address, link_detail_post, number_object, count_access
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+RETURNING id, created_at, updated_at, date_publication, title, image, cost_for_metr, address, link_detail_post, number_object, count_access, region
 `
 
 type CreatePostParams struct {
-	ID             uuid.UUID
-	CreatedAt      time.Time
-	UpdatedAt      time.Time
-	Title          string
-	Image          string
-	CostForMetr    sql.NullInt32
-	Address        string
-	LinkDetailPost string
-	NumberObject   sql.NullInt32
-	CountAccess    sql.NullInt32
+	ID              uuid.UUID
+	CreatedAt       time.Time
+	UpdatedAt       time.Time
+	DatePublication time.Time
+	Title           string
+	Image           string
+	CostForMetr     int32
+	Address         string
+	LinkDetailPost  string
+	NumberObject    int32
+	CountAccess     int32
+	Region          string
 }
 
 func (q *Queries) CreatePost(ctx context.Context, arg CreatePostParams) (Postsbaspana, error) {
@@ -48,6 +51,7 @@ func (q *Queries) CreatePost(ctx context.Context, arg CreatePostParams) (Postsba
 		arg.ID,
 		arg.CreatedAt,
 		arg.UpdatedAt,
+		arg.DatePublication,
 		arg.Title,
 		arg.Image,
 		arg.CostForMetr,
@@ -55,12 +59,14 @@ func (q *Queries) CreatePost(ctx context.Context, arg CreatePostParams) (Postsba
 		arg.LinkDetailPost,
 		arg.NumberObject,
 		arg.CountAccess,
+		arg.Region,
 	)
 	var i Postsbaspana
 	err := row.Scan(
 		&i.ID,
 		&i.CreatedAt,
 		&i.UpdatedAt,
+		&i.DatePublication,
 		&i.Title,
 		&i.Image,
 		&i.CostForMetr,
@@ -68,6 +74,39 @@ func (q *Queries) CreatePost(ctx context.Context, arg CreatePostParams) (Postsba
 		&i.LinkDetailPost,
 		&i.NumberObject,
 		&i.CountAccess,
+		&i.Region,
+	)
+	return i, err
+}
+
+const getPost = `-- name: GetPost :one
+SELECT id, created_at, updated_at, date_publication, title, image, cost_for_metr, address, link_detail_post, number_object, count_access, region
+FROM postsBaspana
+WHERE number_object = $1
+AND link_detail_post = $2
+`
+
+type GetPostParams struct {
+	NumberObject   int32
+	LinkDetailPost string
+}
+
+func (q *Queries) GetPost(ctx context.Context, arg GetPostParams) (Postsbaspana, error) {
+	row := q.db.QueryRowContext(ctx, getPost, arg.NumberObject, arg.LinkDetailPost)
+	var i Postsbaspana
+	err := row.Scan(
+		&i.ID,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+		&i.DatePublication,
+		&i.Title,
+		&i.Image,
+		&i.CostForMetr,
+		&i.Address,
+		&i.LinkDetailPost,
+		&i.NumberObject,
+		&i.CountAccess,
+		&i.Region,
 	)
 	return i, err
 }

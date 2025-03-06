@@ -5,21 +5,22 @@
 package database
 
 import (
-	"database/sql"
 	"time"
 
 	"github.com/google/uuid"
 )
 
 type Postsbaspana struct {
-	ID             uuid.UUID
-	CreatedAt      time.Time
-	UpdatedAt      time.Time
-	Title          string
-	Image          string
-	CostForMetr    sql.NullInt32
-	Address        string
-	LinkDetailPost string
-	NumberObject   sql.NullInt32
-	CountAccess    sql.NullInt32
+	ID              uuid.UUID
+	CreatedAt       time.Time
+	UpdatedAt       time.Time
+	DatePublication time.Time
+	Title           string
+	Image           string
+	CostForMetr     int32
+	Address         string
+	LinkDetailPost  string
+	NumberObject    int32
+	CountAccess     int32
+	Region          string
 }
