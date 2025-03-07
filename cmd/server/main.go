@@ -8,6 +8,7 @@ import (
 	"github.com/FazylovAsylkhan/html-aggregator/internal/database"
 	httpHandler "github.com/FazylovAsylkhan/html-aggregator/internal/handler/http"
 	"github.com/FazylovAsylkhan/html-aggregator/internal/logger"
+	"github.com/FazylovAsylkhan/html-aggregator/internal/scheduler"
 )
 
 func Start(cfg *config.Config) {
@@ -26,6 +27,11 @@ func Start(cfg *config.Config) {
 		Handler: router,
 		Addr:    cfg.Address,
 	}
+
+	go func() {
+		scheduler.Init(db).Start()
+	}()
+
 	log.Infof("Starting server at address %s with base URL %s", cfg.Address, cfg.BaseURL)
 	if err := srv.ListenAndServe(); err != nil {
 		log.Fatalf("Server failed to start: %v", err)

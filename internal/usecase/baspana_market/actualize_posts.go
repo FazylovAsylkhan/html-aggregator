@@ -1,6 +1,7 @@
 package baspana
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -11,12 +12,12 @@ import (
 	"github.com/google/uuid"
 )
 
-func (b *Baspana) actualizePosts(r *http.Request, p Post) (database.Postsbaspana, error){
+func (b *Baspana) actualizePosts(ctx context.Context, p Post) (database.Postsbaspana, error){
 	normolizedData, err := normolizePost(p)
 	if err != nil {
 		return database.Postsbaspana{}, fmt.Errorf("error on normalizing Post: %v", err)
 	}
-	_, err = b.DB.GetPost(r.Context(), database.GetPostParams{
+	_, err = b.DB.GetPost(ctx, database.GetPostParams{
 		NumberObject: normolizedData.NumberObject, 
 		LinkDetailPost: normolizedData.LinkDetailPost,
 	})
@@ -35,7 +36,7 @@ func (b *Baspana) actualizePosts(r *http.Request, p Post) (database.Postsbaspana
 			CountAccess:     normolizedData.CountAccess,
 			Region:          normolizedData.Region,
 		}
-		dbPost, err := b.DB.CreatePost(r.Context(), dbPostParams)
+		dbPost, err := b.DB.CreatePost(ctx, dbPostParams)
 		if err != nil {
 			return database.Postsbaspana{}, fmt.Errorf("error creating post: %v", err)
 		}
@@ -117,7 +118,7 @@ func getNormalizedDate(dateStr string) (date time.Time, localTime time.Time,  er
 	var normalizedDate time.Time
 	utcPlus5 := time.FixedZone("UTC+5", 5*60*60)
 	localTime = time.Now().UTC().In(utcPlus5)
-	if (strings.ToLower(dateStr) == "сегодня" && dateStr == "") {
+	if (strings.ToLower(dateStr) == "сегодня") {
 		normalizedDate = localTime
 	} else {
 		arrDate := strings.Split(dateStr, ".")

@@ -1,8 +1,8 @@
 package baspana
 
 import (
+	"context"
 	"fmt"
-	"net/http"
 	"strconv"
 	"strings"
 
@@ -20,7 +20,7 @@ type Post struct {
 	Count   string
 }
 
-func (b *Baspana) LoadPosts(r *http.Request) ([]Post, error) {
+func (b *Baspana) LoadPosts(ctx context.Context) ([]Post, error) {
 	err := b.parser.Start("https://baspana.otbasybank.kz/pool/search", 3)
 	if err != nil {
 		return nil, fmt.Errorf("starting parser error: %v", err)
@@ -35,8 +35,8 @@ func (b *Baspana) LoadPosts(r *http.Request) ([]Post, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error converting lastPage to int: %v", err)
 	}
-	posts := make([]Post, lastPage)
-	for i := 1; i <= lastPage; i++ {
+	posts := make([]Post, lastPage - 1)
+	for i := 1; i < lastPage; i++ {
 		b.log.Infof("Parsing page %v started", i)
 		selBtn := fmt.Sprintf(`//div[@class='pool-templates']//a[text()='%v']`, i)
 		htmlElement, err := b.parser.ParseNestedPages(i, ".mainContentPool", selBtn)
@@ -54,7 +54,7 @@ func (b *Baspana) LoadPosts(r *http.Request) ([]Post, error) {
 	b.bufferPosts = &posts
 
 	for i, p := range (*b.bufferPosts) {
-		_, err = b.actualizePosts(r, p)
+		_, err = b.actualizePosts(ctx, p)
 		if err != nil {
 			b.log.Infof("baspana_market LoadPages: %v \nindex: %v, post: %v", err, i, p)
 		} else {
