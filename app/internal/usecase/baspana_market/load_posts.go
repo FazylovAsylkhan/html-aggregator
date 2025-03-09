@@ -20,6 +20,13 @@ type Post struct {
 	Count   string
 }
 
+func (b *Baspana) Check() {
+	err := b.parser.Start("https://baspana.otbasybank.kz/pool/search", 3)
+	if err != nil {
+		fmt.Errorf("starting parser error: %v", err)
+	}
+}
+
 func (b *Baspana) LoadPosts(ctx context.Context) ([]Post, error) {
 	err := b.parser.Start("https://baspana.otbasybank.kz/pool/search", 3)
 	if err != nil {
@@ -35,7 +42,7 @@ func (b *Baspana) LoadPosts(ctx context.Context) ([]Post, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error converting lastPage to int: %v", err)
 	}
-	posts := make([]Post, lastPage - 1)
+	posts := make([]Post, lastPage-1)
 	for i := 1; i < lastPage; i++ {
 		b.log.Infof("Parsing page %v started", i)
 		selBtn := fmt.Sprintf(`//div[@class='pool-templates']//a[text()='%v']`, i)
@@ -53,12 +60,12 @@ func (b *Baspana) LoadPosts(ctx context.Context) ([]Post, error) {
 	}
 	b.bufferPosts = &posts
 
-	for i, p := range (*b.bufferPosts) {
+	for i, p := range *b.bufferPosts {
 		_, err = b.actualizePosts(ctx, p)
 		if err != nil {
 			b.log.Infof("baspana_market LoadPages: %v \nindex: %v, post: %v", err, i, p)
 		} else {
-			b.log.Infof("baspana_market LoadPages: index: %v success",  i)
+			b.log.Infof("baspana_market LoadPages: index: %v success", i)
 		}
 	}
 

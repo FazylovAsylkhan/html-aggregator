@@ -10,26 +10,27 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-type Scheduler struct{
-	cron *cron.Cron
-	log *logrus.Logger
+type Scheduler struct {
+	cron    *cron.Cron
+	log     *logrus.Logger
 	baspana *baspana.Baspana
 }
 
 func Init(db *database.Queries) *Scheduler {
 	scheduler := Scheduler{
-		cron: cron.New(),
-		log: logger.New(),
+		cron:    cron.New(),
+		log:     logger.New(),
 		baspana: baspana.Init(db),
 	}
 	scheduler.log.SetFormatter(&logger.GeneralFormatter{})
-	
 
 	return &scheduler
 }
 
 func (s Scheduler) Start() {
-	_, err := s.cron.AddFunc("*/5 * * * *", s.sendRequest)
+	s.baspana.Check()
+
+	_, err := s.cron.AddFunc("*/1 * * * *", s.sendRequest)
 	if err != nil {
 		s.log.Infof("scheduler failed: %v", err)
 	}

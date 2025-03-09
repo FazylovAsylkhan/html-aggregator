@@ -16,5 +16,6 @@ func (p *ParserPage) Start(url string, waitFor int) error {
 	if err != nil {
 		return fmt.Errorf("error on parsing %v: %v", url, err)
 	}
-	return  nil
+
+	return nil
 }
