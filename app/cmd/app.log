@@ -1,0 +1,142 @@
+2025-03-08T16:50:54.314+05:00 info Connection to DB
+2025-03-08T16:50:54.317+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T16:52:32.16+05:00 error HTMLAgregator_v1 GET 404 uri=/load request=Headers: User-Agent: PostmanRuntime/7.37.3,  Body:  response=Headers: Content-Type: text/plain; charset=utf-8,  Body: 404 page not found
+ duration=45.087µs Request failed
+2025-03-08T16:53:13.712+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-08T16:53:23.47+05:00 info Parsing page 1 started
+2025-03-08T16:53:23.494+05:00 info Parsing page 2 started
+2025-03-08T16:53:23.748+05:00 info Parsing page 3 started
+2025-03-08T16:53:23.982+05:00 info Parsing page 4 started
+2025-03-08T16:53:24.104+05:00 info Parsing page 5 started
+2025-03-08T16:53:24.584+05:00 info Parsing page 6 started
+2025-03-08T16:53:26.497+05:00 info Parsing page 7 started
+2025-03-08T16:53:26.714+05:00 info Parsing page 8 started
+2025-03-08T16:53:27.456+05:00 info Parsing page 9 started
+2025-03-08T16:53:28.444+05:00 info Parsing page 10 started
+2025-03-08T16:53:28.807+05:00 info Parsing page 11 started
+2025-03-08T16:53:30.155+05:00 info Parsing page 12 started
+2025-03-08T16:53:31.42+05:00 info Parsing page 13 started
+2025-03-08T16:53:32.412+05:00 info Parsing page 14 started
+2025-03-08T16:53:32.651+05:00 info Parsing page 15 started
+2025-03-08T16:53:32.907+05:00 info Parsing page 16 started
+2025-03-08T16:53:33.209+05:00 info Parsing page 17 started
+2025-03-08T16:53:33.706+05:00 info Parsing page 18 started
+2025-03-08T16:53:36.796+05:00 info Parsing page 19 started
+2025-03-08T16:53:37.186+05:00 info Parsing page 20 started
+2025-03-08T16:53:37.784+05:00 info Parsing page 21 started
+2025-03-08T16:53:38.095+05:00 info Parsing page 22 started
+2025-03-08T16:53:38.34+05:00 info Parsing page 23 started
+2025-03-08T16:53:39.115+05:00 info Parsing page 24 started
+2025-03-08T16:53:39.317+05:00 info Parsing page 25 started
+2025-03-08T16:53:42.365+05:00 info Connection to DB
+2025-03-08T16:53:42.366+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T16:53:49.999+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-08T16:53:59.11+05:00 info Parsing page 1 started
+2025-03-08T16:53:59.128+05:00 info Parsing page 2 started
+2025-03-08T16:53:59.402+05:00 info Parsing page 3 started
+2025-03-08T16:53:59.567+05:00 info Parsing page 4 started
+2025-03-08T16:53:59.818+05:00 info Parsing page 5 started
+2025-03-08T16:53:59.941+05:00 info Parsing page 6 started
+2025-03-08T16:54:00.046+05:00 info Parsing page 7 started
+2025-03-08T16:54:00.549+05:00 info Parsing page 8 started
+2025-03-08T16:54:02.713+05:00 info Parsing page 9 started
+2025-03-08T16:54:02.979+05:00 info Parsing page 10 started
+2025-03-08T16:54:03.213+05:00 info Parsing page 11 started
+2025-03-08T16:54:04.455+05:00 info Parsing page 12 started
+2025-03-08T16:54:04.744+05:00 info Parsing page 13 started
+2025-03-08T16:54:05.098+05:00 info Parsing page 14 started
+2025-03-08T16:54:05.383+05:00 info Parsing page 15 started
+2025-03-08T16:54:06.827+05:00 info Parsing page 16 started
+2025-03-08T16:54:07.062+05:00 info Parsing page 17 started
+2025-03-08T16:54:07.345+05:00 info Parsing page 18 started
+2025-03-08T16:54:07.548+05:00 info Parsing page 19 started
+2025-03-08T16:54:08.168+05:00 info Parsing page 20 started
+2025-03-08T16:54:09.314+05:00 info Parsing page 21 started
+2025-03-08T16:54:09.548+05:00 info Parsing page 22 started
+2025-03-08T16:54:09.784+05:00 info Parsing page 23 started
+2025-03-08T16:54:10.389+05:00 info Parsing page 24 started
+2025-03-08T16:54:11.005+05:00 info Parsing page 25 started
+2025-03-08T16:54:11.983+05:00 info Parsing page 26 started
+2025-03-08T16:54:12.205+05:00 info Parsing page 27 started
+2025-03-08T16:54:12.428+05:00 info Parsing page 28 started
+2025-03-08T16:54:13.486+05:00 info Parsing page 29 started
+2025-03-08T16:54:14.567+05:00 info Parsing page 30 started
+2025-03-08T16:54:15.092+05:00 info Parsing page 31 started
+2025-03-08T16:54:15.298+05:00 info Parsing page 32 started
+2025-03-08T16:54:15.508+05:00 info Parsing page 33 started
+2025-03-08T16:54:15.706+05:00 info Parsing page 34 started
+2025-03-08T16:54:17.159+05:00 info Parsing page 35 started
+2025-03-08T16:54:18.589+05:00 info Parsing page 36 started
+2025-03-08T16:54:18.81+05:00 info Parsing page 37 started
+2025-03-08T16:54:19.069+05:00 info Parsing page 38 started
+2025-03-08T16:54:19.28+05:00 info Parsing page 39 started
+2025-03-08T16:54:19.525+05:00 info Parsing page 40 started
+2025-03-08T16:54:19.72+05:00 info Parsing page 41 started
+2025-03-08T16:54:22.39+05:00 info Parsing page 42 started
+2025-03-08T16:54:22.633+05:00 info Parsing page 43 started
+2025-03-08T16:54:22.873+05:00 info Parsing page 44 started
+2025-03-08T16:54:23.104+05:00 info Parsing page 45 started
+2025-03-08T16:54:23.309+05:00 info Parsing page 46 started
+2025-03-08T16:54:23.529+05:00 info Parsing page 47 started
+2025-03-08T16:54:24.05+05:00 info Parsing page 48 started
+2025-03-08T16:54:24.717+05:00 info Parsing page 49 started
+2025-03-08T16:54:26.501+05:00 info Parsing page 50 started
+2025-03-08T16:54:26.697+05:00 info Parsing page 51 started
+2025-03-08T16:54:27.076+05:00 info Parsing page 52 started
+2025-03-08T16:54:27.284+05:00 info Parsing page 53 started
+2025-03-08T16:54:27.485+05:00 info Parsing page 54 started
+2025-03-08T16:54:27.876+05:00 info Parsing page 55 started
+2025-03-08T16:54:37.432+05:00 info Connection to DB
+2025-03-08T16:54:37.433+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T16:54:41.252+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-08T17:00:18.73+05:00 info Connection to DB
+2025-03-08T17:00:18.731+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T17:00:25.329+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-08T17:01:43.847+05:00 info Connection to DB
+2025-03-08T17:01:43.848+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T17:01:48.564+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-08T17:06:53.233+05:00 info Connection to DB
+2025-03-08T17:06:53.234+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T17:07:00.902+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-08T17:09:18.211+05:00 info Connection to DB
+2025-03-08T17:09:18.212+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T17:09:18.994+05:00 info Parsing page: https://baspana.otbasybank.kz/pool/search
+2025-03-08T17:09:18.994+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-08T17:10:53.65+05:00 info Connection to DB
+2025-03-08T17:10:53.652+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T17:10:56.593+05:00 info HTMLAgregator_v1 GET 200 uri=/v1/load request=Headers: User-Agent: PostmanRuntime/7.37.3,  Body:  response=Headers: Content-Type: application/json,  Body: "hello" duration=64.492µs Request handled
+2025-03-08T17:11:53.682+05:00 info Connection to DB
+2025-03-08T17:11:53.683+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T17:14:01.397+05:00 info Connection to DB
+2025-03-08T17:14:01.399+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-08T17:15:00.001+05:00 info cron: start sending request
+2025-03-08T17:15:00.001+05:00 info Parsing page: https://baspana.otbasybank.kz/pool/search
+2025-03-08T17:15:00.001+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-09T09:14:06.082+05:00 info Connection to DB
+2025-03-09T09:14:06.084+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-09T09:14:06.084+05:00 info Parsing page: https://baspana.otbasybank.kz/pool/search
+2025-03-09T09:14:06.085+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-09T09:15:00.01+05:00 info cron: start sending request
+2025-03-09T09:15:00.01+05:00 info Parsing page: https://baspana.otbasybank.kz/pool/search
+2025-03-09T09:15:00.01+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-09T09:15:26.764+05:00 info request failed: starting parser error: error on parsing https://baspana.otbasybank.kz/pool/search: page load error net::ERR_NAME_NOT_RESOLVED
+2025-03-09T09:15:26.764+05:00 info cron: finished sending request successfully
+2025-03-09T09:15:56.308+05:00 info Connection to DB
+2025-03-09T09:15:56.309+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-09T09:16:00.004+05:00 info cron: start sending request
+2025-03-09T09:16:00.004+05:00 info Parsing page: https://baspana.otbasybank.kz/pool/search
+2025-03-09T09:16:00.004+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-09T09:16:04.808+05:00 info Parsing page: https://baspana.otbasybank.kz/pool/search
+2025-03-09T09:16:04.809+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-09T09:18:11.075+05:00 info Connection to DB
+2025-03-09T09:18:11.076+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-09T09:18:21.552+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-09T09:18:49.504+05:00 info HTMLAgregator_v1 GET 200 uri=/v1/load request=Headers: User-Agent: Thunder Client (https://www.thunderclient.com),  Body:  response=Headers: Content-Type: application/json, application/json,  Body: {"error":"starting parser error: error on parsing https://baspana.otbasybank.kz/pool/search: page load error net::ERR_NAME_NOT_RESOLVED"}null duration=27.951499642s Request handled
+2025-03-09T09:19:00+05:00 info cron: start sending request
+2025-03-09T09:19:00.001+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-09T09:42:15.572+05:00 info Connection to DB
+2025-03-09T09:42:15.573+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-09T09:42:19.036+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
+2025-03-09T10:58:43.11+05:00 info Connection to DB
+2025-03-09T10:58:43.112+05:00 info Starting server at address localhost:8080 with base URL https://baspana.otbasybank.kz
+2025-03-09T10:58:43.117+05:00 info Parsing page https://baspana.otbasybank.kz/pool/search started, wait 3 sec.
